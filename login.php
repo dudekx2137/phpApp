@@ -16,6 +16,7 @@
         if($row['login'] == $login && $row['password'] == $password){
             header('Location: main.php');
             $_SESSION['username'] = $row['login'];
+            $_SESSION['password'] = $row['password'];
         }else{
             echo "<h2>Wprowadziłeś złe dane</h2>";
         }

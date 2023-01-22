@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+<?php
         session_start();
-        echo "<h2>UDALO CI SIE ZALOGOWAC: ".$_SESSION['user']."</h2>";
-    ?>
+        include'is_user_logged.php';
+?>
 </body>
 </html>

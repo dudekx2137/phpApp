@@ -51,7 +51,7 @@
                     $result = mysqli_query($conn, $userInsertQuery);
                     ?>
                     <script>
-                        alert("Success!");
+                        alert("Sukces! Teraz możesz się zalogować!");
                     </script>
                     <?php
                 }else{
