@@ -1,8 +1,8 @@
 <?php
-    session_start();
+   
     require_once'connect.php';
-
-    error_reporting(E_ALL ^ E_NOTICE);  
+    session_start(); 
+     
     $conn = @mysqli_connect($host, $db_user, $db_password, $db_name);
     if (mysqli_connect_errno()!=0)
     {
@@ -14,11 +14,20 @@
         $result = mysqli_query($conn, $queryCheck);
         $row = mysqli_fetch_assoc($result);
         if($row['login'] == $login && $row['password'] == $password){
-            header('Location: main.php');
+            
             $_SESSION['username'] = $row['login'];
             $_SESSION['password'] = $row['password'];
+            header('Location: main.php');
+
         }else{
-            echo "<h2>Wprowadziłeś złe dane</h2>";
+            ?>
+            <script>
+            setTimeout(function(){
+            alert("Wprowadziłeś złe dane");
+            window.location.href = "index.php";
+            },500);
+            </script>
+            <?php
         }
     }
 

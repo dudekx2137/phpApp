@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="logout.php">
+        <button type="submit" id="logoutButton">Logout</button>
+    </form>
 <?php
-        session_start();
+        session_start();    
         include'is_user_logged.php';
+        echo "hello world - "." ".$_SESSION['username'];
 ?>
 </body>
 </html>
