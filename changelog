@@ -1,3 +1,10 @@
 just finished registration and login form so they work properly
 added is_user_logged.php that will check if user is logged, and if its not it will redirect to login page
 ok, so login and register form works fine, time for further steps
+ 
+ 
+ 
+ideas:
+  wallet app
+  bank simulator
+  
