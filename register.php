@@ -35,6 +35,7 @@
         </fieldset>
     </form>
     <?php
+        session_start();
         require_once"connect.php";
         error_reporting(E_ALL ^ E_NOTICE);  
         $conn = @mysqli_connect($host, $db_user, $db_password, $db_name);

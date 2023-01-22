@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once'connect.php';
 
     error_reporting(E_ALL ^ E_NOTICE);  
@@ -13,7 +14,8 @@
         $result = mysqli_query($conn, $queryCheck);
         $row = mysqli_fetch_assoc($result);
         if($row['login'] == $login && $row['password'] == $password){
-            header('Location: main.html');
+            header('Location: main.php');
+            $_SESSION['username'] = $row['login'];
         }else{
             echo "<h2>Wprowadziłeś złe dane</h2>";
         }
