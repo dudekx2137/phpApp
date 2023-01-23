@@ -3,7 +3,9 @@ added is_user_logged.php that will check if user is logged, and if its not it wi
 ok, so login and register form works fine, time for further steps
  
  
- 
+ todo: 
+  - i have to center forms 
+  -and then i can go further with my app
 ideas:
   wallet app
   bank simulator
