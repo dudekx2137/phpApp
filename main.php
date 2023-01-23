@@ -5,15 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .nav_bar{
+            height: 4rem;
+            background-color: rgb(31, 31, 153);
+            display: flex;
+            justify-content: center;
+        }
+        .main_container{
+            background-color: darkgoldenrod;
+            height: 15rem;
+        }
+    </style>
 </head>
 <body>
-    <form action="logout.php">
-        <button type="submit" id="logoutButton">Logout</button>
-    </form>
+    <div class="nav_bar">
+        <form action="logout.php" class="logoutButton">
+            <button type="submit" id="logoutButton">Logout</button>
+        </form>
+        <form>
+            <button>My account</button>
+            <button>Cost tam</button>
+            <button>Cos tam2</button>
+        </form>
+    </div>
+    <div class = "main_container">
+        <h2>siema</h2>
+    </div>
 <?php
-        session_start();    
-        include'is_user_logged.php';
-        echo "hello world - "." ".$_SESSION['username'];
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
+    session_start(); 
+    include'is_user_logged.php';
 ?>
 </body>
 </html>
